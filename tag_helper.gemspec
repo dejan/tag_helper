@@ -12,5 +12,5 @@ Gem::Specification.new do |s|
 
   # ensure the gem is built out of versioned files
   s.files = Dir['Rakefile', '{bin,lib,man,test,spec}/**/*',
-                'README*', 'LICENSE*'] & `git ls-files -z`.split("\0")
+                'README*', 'MIT-LICENSE'] & `git ls-files -z`.split("\0")
 end
