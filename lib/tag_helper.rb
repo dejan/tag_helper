@@ -37,4 +37,5 @@ module TagHelper
     REXML::Text::normalize(s)
   end
 
+  extend self
 end
