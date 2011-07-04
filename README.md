@@ -13,6 +13,9 @@ TagHelper is a zero dependency, lightweight Ruby lib for building XHTML tags sim
      >> require 'tag_helper'
      => true
 
+     >> TagHelper.image_tag('1.png', :alt => 'number one!')
+     => "<img alt="number one!" src="1.png" />"
+
      >> include TagHelper
      => Object
 
