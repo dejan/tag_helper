@@ -30,7 +30,7 @@ module TagHelper
   end
 
   def attributes(hash)
-    hash.to_a.map { |k, v| %{#{k}="#{normalize v}"} }.join(' ')
+    hash.to_a.reject { |k,v| v.nil? }.map { |k, v| %{#{k}="#{normalize v}"} }.join(' ')
   end
 
   def normalize(s)
