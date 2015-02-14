@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.author      = 'Dejan Simic'
   gem.email       = 'desimic@gmail.com'
   gem.homepage    = 'https://github.com/dejan/tag_helper'
-  gem.licence     = 'MIT'
+  gem.license     = 'MIT'
 
   gem.files       = Dir['README.md', 'lib/**/*.rb']
 end
