@@ -41,8 +41,6 @@ $ gem install tag_helper
 
 ## LICENSE
 
-Licence
-
 Copyright (c) 2015 Dejan Simic
 
 MIT License
