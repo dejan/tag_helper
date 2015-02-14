@@ -1,16 +1,14 @@
-Gem::Specification.new do |s|
-  s.name        = "tag_helper"
-  s.version     = '0.0.2'
-  s.date        = Date.today.to_s
+Gem::Specification.new do |gem|
+  gem.name        = 'tag_helper'
+  gem.version     = '0.1.0'
 
-  s.summary     = "Build XHTML tags off the Rails"
-  s.description = "TagHelper is a zero dependency, lightweight Ruby lib for building XHTML tags similar to the API provided by Rails' *TagHelper modules."
+  gem.summary     = 'Lightweight Ruby lib for building XHTML tags'
+  gem.description = 'Zero dependency, lightweight Ruby lib for building XHTML tags similar to the API provided by Rails` *TagHelper modules'
 
-  s.authors     = ['Dejan Simic']
-  s.email       = 'desimic@gmail.com'
-  s.homepage    = "http://github.com/dejan/tag_helper"
+  gem.author      = 'Dejan Simic'
+  gem.email       = 'desimic@gmail.com'
+  gem.homepage    = 'https://github.com/dejan/tag_helper'
+  gem.licence     = 'MIT'
 
-  # ensure the gem is built out of versioned files
-  s.files = Dir['Rakefile', '{bin,lib,man,test,spec}/**/*',
-                'README*', 'MIT-LICENSE'] & `git ls-files -z`.split("\0")
+  gem.files       = Dir['README.md', 'lib/**/*.rb']
 end
