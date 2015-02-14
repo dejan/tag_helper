@@ -1,5 +1,3 @@
-require 'rexml/document'
-
 module TagHelper
 
   def image_tag(src, html_options = {})
@@ -23,10 +21,9 @@ module TagHelper
   end
 
   def content_tag(tag, value, attrs = {})
-    b = "<#{tag_and_attributes(tag, attributes(attrs))}>"
-    v = normalize(value)
-    e = "</#{tag}>"
-    [b, v, e].join
+    start_tag = "<#{tag_and_attributes(tag, attributes(attrs))}>"
+    end_tag   = "</#{tag}>"
+    [start_tag, value, end_tag].join
   end
 
   def tag_and_attributes(tag, attributes)
@@ -36,11 +33,7 @@ module TagHelper
   def attributes(hash)
     hash.to_a.
       reject { |k,v| v.nil? }.
-      map { |k, v| %{#{k}="#{normalize v}"} }.join(' ')
-  end
-
-  def normalize(s)
-    REXML::Text::normalize(s)
+      map { |k, v| %{#{k}="#{v}"} }.join(' ')
   end
 
   extend self
