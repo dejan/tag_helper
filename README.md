@@ -39,7 +39,7 @@ $ gem install tag_helper
 => "<img alt="number one!" src="1.png" />"
 ```
 
-## LICENCE
+## LICENSE
 
 Licence
 
