@@ -19,18 +19,24 @@ module TagHelper
   end
 
   def unary_tag(tag, attrs = {})
-    "<#{tag} #{attributes(attrs)} />"
+    "<#{tag_and_attributes(tag, attributes(attrs))} />"
   end
 
   def content_tag(tag, value, attrs = {})
-    b = "<#{tag} #{attributes(attrs)}>"
+    b = "<#{tag_and_attributes(tag, attributes(attrs))}>"
     v = normalize(value)
     e = "</#{tag}>"
     [b, v, e].join
   end
 
+  def tag_and_attributes(tag, attributes)
+    attributes.empty?? tag : "#{tag} #{attributes}"
+  end
+
   def attributes(hash)
-    hash.to_a.reject { |k,v| v.nil? }.map { |k, v| %{#{k}="#{normalize v}"} }.join(' ')
+    hash.to_a.
+      reject { |k,v| v.nil? }.
+      map { |k, v| %{#{k}="#{normalize v}"} }.join(' ')
   end
 
   def normalize(s)
