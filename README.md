@@ -26,17 +26,10 @@ $ gem install tag_helper
 ## Usage
 
 ```ruby
->> require 'tag_helper'
-=> true
+require 'tag_helper'
 
->> TagHelper.image_tag('1.png', :alt => 'number one!')
-=> "<img alt="number one!" src="1.png" />"
-
->> include TagHelper
-=> Object
-
->> image_tag('1.png', :alt => 'number one!')
-=> "<img alt="number one!" src="1.png" />"
+TagHelper.image_tag('1.png', :alt => 'number one!')
+# => "<img alt="number one!" src="1.png" />"
 ```
 
 ## LICENSE
