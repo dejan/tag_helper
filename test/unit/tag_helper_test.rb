@@ -1,13 +1,12 @@
 require "#{File.dirname(__FILE__)}/../test_helper"
 
 class ConfigTest < Test::Unit::TestCase
-
   def test_image_tag
     assert_equal '<img src="1.png" />', TagHelper.image_tag('1.png')
   end
 
   def test_image_tag2
-    assert_equal '<img alt="number one!" src="1.png" />', TagHelper.image_tag('1.png', :alt => 'number one!')
+    assert_equal '<img alt="number one!" src="1.png" />', TagHelper.image_tag('1.png', alt: 'number one!')
   end
 
   def test_label_tag2
@@ -29,5 +28,4 @@ class ConfigTest < Test::Unit::TestCase
   def test_no_attributes_unary
     assert_equal '<br />', TagHelper.unary_tag('br')
   end
-
 end

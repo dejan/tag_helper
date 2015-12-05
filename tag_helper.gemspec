@@ -10,5 +10,7 @@ Gem::Specification.new do |gem|
   gem.homepage    = 'https://github.com/dejan/tag_helper'
   gem.license     = 'MIT'
 
-  gem.files       = Dir['README.md', 'lib/**/*.rb']
+  gem.add_development_dependency 'rubocop', '~> 0.35.1'
+
+  gem.files = Dir['README.md', 'lib/**/*.rb']
 end
