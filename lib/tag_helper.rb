@@ -35,6 +35,10 @@ module TagHelper
         name: name))
   end
 
+  def iframe_tag(html_options = {})
+    unary_tag(:iframe, html_options)
+  end
+
   def unary_tag(tag, attrs = {})
     "<#{tag_and_attributes(tag, attributes(attrs))} />"
   end

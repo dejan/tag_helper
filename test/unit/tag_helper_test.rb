@@ -31,6 +31,25 @@ class ConfigTest < Test::Unit::TestCase
       TagHelper.text_field_tag('u', 'dejan'))
   end
 
+  def test_empty_iframe
+    assert_equal(
+      '<iframe />',
+      TagHelper.iframe_tag)
+  end
+
+  def test_iframe
+    assert_equal(
+      '<iframe width="300" height="200" '\
+        'src="http://embed.ted.com/talks/1.html" '\
+        'webkitAllowFullScreen="true" mozallowfullscreen="true" />',
+      TagHelper.iframe_tag(
+        width: 300,
+        height: 200,
+        src: 'http://embed.ted.com/talks/1.html',
+        webkitAllowFullScreen: true,
+        mozallowfullscreen: true))
+  end
+
   def test_no_attributes
     assert_equal(
       '<label>Username</label>',
