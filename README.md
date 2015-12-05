@@ -1,7 +1,7 @@
 tag_helper
 ==========
 
-TagHelper is a zero dependency, lightweight Ruby lib for building XHTML tags similar to the API provided by Rails' *TagHelper modules.
+Lightweight Ruby lib for building XHTML tags.
 
 ## Installation
 

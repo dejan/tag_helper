@@ -1,18 +1,38 @@
+# XHTML tags builder
 module TagHelper
+  module_function
+
   def image_tag(src, html_options = {})
-    unary_tag(:img, html_options.merge(src: src))
+    unary_tag(
+      :img,
+      html_options.merge(src: src))
   end
 
   def label_tag(label_for, label = nil, html_options = {})
-    content_tag(:label, label || label_for, html_options.merge(for: label_for))
+    content_tag(
+      :label,
+      label || label_for,
+      html_options.merge(for: label_for))
   end
 
   def text_field_tag(name, value, html_options = {})
-    unary_tag(:input, html_options.merge(id: name, value: value, type: 'text', name: name))
+    unary_tag(
+      :input,
+      html_options.merge(
+        id: name,
+        value: value,
+        type: 'text',
+        name: name))
   end
 
   def hidden_field_tag(name, value, html_options = {})
-    unary_tag(:input, html_options.merge(id: name, value: value, type: 'hidden', name: name))
+    unary_tag(
+      :input,
+      html_options.merge(
+        id: name,
+        value: value,
+        type: 'hidden',
+        name: name))
   end
 
   def unary_tag(tag, attrs = {})
@@ -34,6 +54,4 @@ module TagHelper
       .reject { |_k, v| v.nil? }
       .map { |k, v| %(#{k}="#{v}") }.join(' ')
   end
-
-  extend self
 end
