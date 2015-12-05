@@ -29,7 +29,16 @@ $ gem install tag_helper
 require 'tag_helper'
 
 TagHelper.image_tag('1.png', :alt => 'number one!')
-# => "<img alt="number one!" src="1.png" />"
+# => '<img alt="number one!" src="1.png" />'
+
+TagHelper.unary('br')
+# => '<br />'
+
+TagHelper.content(:label, 'Name', for: 'name'))
+# => '<label for="name">Name</label>'
+
+TagHelper.content(:p, '<script>alert(0)</script>')
+# => '<p>&lt;script&gt;alert(0)&lt;/script&gt;</p>'
 ```
 
 ## LICENSE
