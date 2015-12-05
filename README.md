@@ -28,8 +28,8 @@ $ gem install tag_helper
 ```ruby
 require 'tag_helper'
 
-TagHelper.image_tag('1.png', :alt => 'number one!')
-# => '<img alt="number one!" src="1.png" />'
+TagHelper.unary(:img, src: '1.png', alt: 'number one!'))
+# => '<img src="1.png" alt="number one!" />'
 
 TagHelper.unary('br')
 # => '<br />'
