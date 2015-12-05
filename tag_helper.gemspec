@@ -1,8 +1,8 @@
 Gem::Specification.new do |gem|
   gem.name        = 'tag_helper'
-  gem.version     = '0.3.0'
+  gem.version     = '0.4.0'
 
-  gem.summary     = 'Lightweight Ruby lib for building XHTML tags'
+  gem.summary     = 'Build XHTML tags with minimal API'
   gem.description = 'Zero dependency, lightweight API for building XHTML tags'
 
   gem.author      = 'Dejan Simic'
