@@ -3,7 +3,7 @@ Gem::Specification.new do |gem|
   gem.version     = '0.2.0'
 
   gem.summary     = 'Lightweight Ruby lib for building XHTML tags'
-  gem.description = 'Zero dependency, lightweight Ruby lib for building XHTML tags similar to the API provided by Rails` *TagHelper modules'
+  gem.description = 'Zero dependency, lightweight API for building XHTML tags'
 
   gem.author      = 'Dejan Simic'
   gem.email       = 'desimic@gmail.com'
