@@ -8,7 +8,7 @@ class ConfigTest < Test::Unit::TestCase
   end
 
   def test_unary_with_no_attributes_unary
-    assert_equal('<br />', TagHelper.unary('br'))
+    assert_equal('<br />', TagHelper.unary(:br))
   end
 
   def test_content

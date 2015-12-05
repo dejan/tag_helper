@@ -31,7 +31,7 @@ require 'tag_helper'
 TagHelper.unary(:img, src: '1.png', alt: 'number one!'))
 # => '<img src="1.png" alt="number one!" />'
 
-TagHelper.unary('br')
+TagHelper.unary(:br)
 # => '<br />'
 
 TagHelper.content(:label, 'Name', for: 'name'))
