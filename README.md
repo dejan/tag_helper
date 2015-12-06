@@ -28,16 +28,18 @@ $ gem install tag_helper
 ```ruby
 require 'tag_helper'
 
-TagHelper.unary(:img, src: '1.png', alt: 'number one!'))
+include TagHelper
+
+tag(:img, src: '1.png', alt: 'number one!'))
 # => '<img src="1.png" alt="number one!" />'
 
-TagHelper.unary(:br)
+tag(:br)
 # => '<br />'
 
-TagHelper.content(:label, 'Name', for: 'name'))
+tag(:label, for: 'name') { 'Name' })
 # => '<label for="name">Name</label>'
 
-TagHelper.content(:p, '<script>alert(0)</script>')
+tag(:p) { '<script>alert(0)</script>' }
 # => '<p>&lt;script&gt;alert(0)&lt;/script&gt;</p>'
 ```
 
