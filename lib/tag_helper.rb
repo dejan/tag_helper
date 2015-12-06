@@ -1,5 +1,3 @@
-require 'cgi'
-
 # XHTML tags builder
 module TagHelper
   def tag(tag_name, attrs = {})
