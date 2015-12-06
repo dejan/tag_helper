@@ -1,5 +1,5 @@
-tag_helper
-==========
+TagHelper
+=========
 
 Lightweight Ruby lib for building XHTML tags.
 
