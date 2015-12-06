@@ -6,6 +6,7 @@ task default: :test
 
 desc 'Test TagHelper'
 Rake::TestTask.new(test: :rubocop) do |t|
+  t.libs << 'test'
   t.pattern = 'test/**/*_test.rb'
 end
 
