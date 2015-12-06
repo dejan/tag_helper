@@ -30,17 +30,21 @@ require 'tag_helper'
 
 include TagHelper
 
-tag(:img, src: '1.png', alt: 'number one!'))
+tag(:img, src: '1.png', alt: 'number one!')
 # => '<img src="1.png" alt="number one!" />'
 
 tag(:br)
 # => '<br />'
 
-tag(:label, for: 'name') { 'Name' })
+tag(:label, for: 'name') { 'Name' }
 # => '<label for="name">Name</label>'
 
-tag(:p) { '<script>alert(0)</script>' }
-# => '<p>&lt;script&gt;alert(0)&lt;/script&gt;</p>'
+tag(:div) do
+  tag(:form) do
+    tag(:input, type: 'text')
+  end
+end
+# => '<div><form><input type="text" /></form></div>'
 ```
 
 ## LICENSE
