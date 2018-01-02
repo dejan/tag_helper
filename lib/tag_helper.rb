@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # XHTML tags builder
 module TagHelper
   def tag(tag_name, attrs = {})
@@ -26,8 +28,8 @@ module TagHelper
 
   def tag_attributes(hash)
     hash.to_a
-      .reject { |_k, v| v.nil? }
-      .map { |k, v| %(#{k}="#{v}") }.join(' ')
+        .reject { |_k, v| v.nil? }
+        .map { |k, v| %(#{k}="#{v}") }.join(' ')
   end
 
   extend self

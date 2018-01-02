@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Gem::Specification.new do |gem|
   gem.name        = 'tag_helper'
   gem.version     = '0.5.0'
@@ -11,8 +13,8 @@ Gem::Specification.new do |gem|
   gem.license     = 'MIT'
 
   gem.add_development_dependency 'rake', '~> 10.4', '>= 10.4.2'
+  gem.add_development_dependency 'rubocop', '~> 0.52.1'
   gem.add_development_dependency 'test-unit', '~> 3.1', '>= 3.1.5'
-  gem.add_development_dependency 'rubocop', '~> 0.35.1'
 
   gem.files = Dir['README.md', 'lib/**/*.rb']
 end
