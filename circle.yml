@@ -1,0 +1,4 @@
+dependencies:
+  override:
+    - gem update --system
+    - bundle install
