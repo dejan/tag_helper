@@ -53,10 +53,6 @@ end
 # => '<div><form><input type="text" /></form></div>'
 ```
 
-## Code Status
-
-[![Circle CI](https://circleci.com/gh/dejan/tag_helper.svg?style=svg&circle-token=cefb9d11fb03efefcf9e35bbc29d9eef68bd980e)](https://circleci.com/gh/dejan/tag_helper)
-
 ## License
 
 TagHelper is released under the [MIT License](https://raw.githubusercontent.com/dejan/tag_helper/master/MIT-LICENCE).
