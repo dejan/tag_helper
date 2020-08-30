@@ -12,7 +12,7 @@ Gem::Specification.new do |gem|
   gem.homepage    = 'https://github.com/dejan/tag_helper'
   gem.license     = 'MIT'
 
-  gem.add_development_dependency 'rake', '~> 10.4', '>= 10.4.2'
+  gem.add_development_dependency 'rake', '>= 10.4.2', '~> 12.3'
   gem.add_development_dependency 'rubocop', '~> 0.52.1'
   gem.add_development_dependency 'test-unit', '~> 3.1', '>= 3.1.5'
 
