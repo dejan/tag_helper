@@ -28,7 +28,7 @@ module TagHelper
 
   def tag_attributes(hash)
     hash.to_a
-        .reject { |_k, v| v.nil? }
+        .compact
         .map { |k, v| %(#{k}="#{v}") }.join(' ')
   end
 
